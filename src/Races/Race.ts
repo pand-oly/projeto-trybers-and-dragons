@@ -7,13 +7,13 @@ export default abstract class Race {
     this._dexterity = dexterity;
   }
 
-  public get name(): string { return this._name; }
+  get name(): string { return this._name; }
 
-  public get dexterity(): number { return this._dexterity; }
+  get dexterity(): number { return this._dexterity; }
 
-  public static createdRacesInstances(): number {
+  static createdRacesInstances(): number {
     throw new Error('Not implemented');
   }
 
-  public abstract get maxLifePoints(): number;
+  abstract get maxLifePoints(): number;
 }
