@@ -26,4 +26,13 @@ export default class Character implements Fighter {
     this._energy = { type_: this._archetype.energyType,
       amount: generateRandomStatus() };
   }
+
+  get race(): Race { return this._race; }
+  get archetype(): ArcheType { return this._archetype; }
+  get maxLifePoints(): number { return this._maxLifePoints; }
+  get lifePoints(): number { return this._lifePoints; }
+  get strength(): number { return this._strength; }
+  get defense(): number { return this._defense; }
+  get dexterity(): number { return this._dexterity; }
+  get energy(): Energy { return this._energy; }
 }
