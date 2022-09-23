@@ -35,4 +35,15 @@ export default class Character implements Fighter {
   get defense(): number { return this._defense; }
   get dexterity(): number { return this._dexterity; }
   get energy(): Energy { return this._energy; }
+
+  receiveDamage(attackPoints: number): number {
+    const damage = attackPoints - this._defense;
+    if (damage > 0) {
+      this._lifePoints -= damage;
+      if (this._lifePoints < -1) {
+        this._lifePoints = -1;
+      }
+    }
+    return this._lifePoints;
+  }
 }
